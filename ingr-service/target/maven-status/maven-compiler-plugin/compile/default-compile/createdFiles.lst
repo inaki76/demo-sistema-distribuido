@@ -1,0 +1,3 @@
+com\solicitudes\ingr\IngrServiceApplication.class
+com\solicitudes\ingr\service\SolicitudValidatorService.class
+com\solicitudes\ingr\config\KafkaConfig.class

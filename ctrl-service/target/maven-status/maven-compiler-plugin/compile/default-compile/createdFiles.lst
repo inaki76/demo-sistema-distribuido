@@ -1,0 +1,4 @@
+com\solicitudes\ctrl\service\SolicitudProcessorService.class
+com\solicitudes\ctrl\controller\SolicitudController.class
+com\solicitudes\ctrl\repository\SolicitudRepository.class
+com\solicitudes\ctrl\CtrlServiceApplication.class

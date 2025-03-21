@@ -1,0 +1,7 @@
+com\solicitudes\frontend\service\NotificacionService.class
+com\solicitudes\frontend\service\SolicitudService$1.class
+com\solicitudes\frontend\config\WebSocketConfig.class
+com\solicitudes\frontend\service\SolicitudService.class
+com\solicitudes\frontend\config\AppConfig.class
+com\solicitudes\frontend\controller\SolicitudController.class
+com\solicitudes\frontend\FrontendServiceApplication.class
