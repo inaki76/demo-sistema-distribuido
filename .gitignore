@@ -1,0 +1,16 @@
+   # Archivos compilados
+   *.class
+   target/
+   
+   # Archivos de configuración IDE
+   .idea/
+   *.iml
+   .settings/
+   .project
+   .classpath
+   
+   # Logs
+   *.log
+   
+   # Datos de MongoDB y Kafka
+   data/
