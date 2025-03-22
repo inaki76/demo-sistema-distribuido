@@ -212,3 +212,39 @@ Se han realizado las siguientes mejoras en el código:
 5. **Organización del código**: Se ha reorganizado el código siguiendo mejores prácticas para microservicios en Spring Boot.
 
 Estas mejoras hacen que el código sea más mantenible, comprensible y mejor documentado para futuros desarrolladores que trabajen con el sistema. 
+
+## Consulta de la Base de Datos MongoDB
+
+Para ver y gestionar el contenido de la base de datos MongoDB, puedes utilizar los siguientes comandos:
+
+### 1. Ver todas las solicitudes almacenadas
+
+```powershell
+docker exec -it mongodb mongosh --eval "db.getSiblingDB('solicitudes_db').solicitud.find().pretty()"
+```
+
+### 2. Buscar solicitudes por cliente
+
+```powershell
+docker exec -it mongodb mongosh --eval "db.getSiblingDB('solicitudes_db').solicitud.find({nombreCliente: 'TRY-UIK'}).pretty()"
+```
+
+### 3. Contar el total de solicitudes
+
+```powershell
+docker exec -it mongodb mongosh --eval "db.getSiblingDB('solicitudes_db').solicitud.countDocuments()"
+```
+
+### 4. Buscar solicitudes por estado
+
+```powershell
+docker exec -it mongodb mongosh --eval "db.getSiblingDB('solicitudes_db').solicitud.find({estado: 'PROCESADA'}).pretty()"
+```
+
+### 5. Insertar una solicitud de prueba
+
+```powershell
+docker exec -it mongodb mongosh --eval "db.getSiblingDB('solicitudes_db').solicitud.insertOne({id: 'test-id', nombreCliente: 'Cliente Prueba', descripcion: 'Solicitud de prueba', cantidad: 1, estado: 'CREADA', fechaCreacion: new Date()})"
+```
+
+Estos comandos te permiten verificar el correcto funcionamiento del sistema comprobando que las solicitudes se están almacenando correctamente en MongoDB. 
